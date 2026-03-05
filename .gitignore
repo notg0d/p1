@@ -1,0 +1,47 @@
+# ── Build outputs ────────────────────────────────────
+build/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# ── Gradle ───────────────────────────────────────────
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# ── Android Studio / IntelliJ IDEA ───────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
+captures/
+
+# ── Local config (contains your SDK path) ────────────
+local.properties
+
+# ── OS generated files ───────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Kotlin / Java ────────────────────────────────────
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# ── Logs ─────────────────────────────────────────────
+*.log
+
+# ── Signing keys (NEVER commit these) ────────────────
+*.jks
+*.keystore
+signing.properties
