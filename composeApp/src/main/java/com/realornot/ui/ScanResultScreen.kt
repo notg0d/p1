@@ -358,33 +358,19 @@ fun ScanResultScreen(
 
         Spacer(Modifier.height(24.dp))
 
-        // Action buttons
-        Row(
+        // Action button
+        Button(
+            onClick = onBack,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 20.dp, vertical = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
+                .padding(horizontal = 20.dp, vertical = 16.dp)
+                .height(48.dp),
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = SageOlive, contentColor = BgDark),
         ) {
-            OutlinedButton(
-                onClick = { /* Share */ },
-                modifier = Modifier.weight(1f).height(48.dp),
-                shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.outlinedButtonColors(contentColor = SageOlive),
-            ) {
-                Icon(Icons.Outlined.Share, null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(6.dp))
-                Text("Share", fontFamily = DmSans, fontSize = 14.sp)
-            }
-            Button(
-                onClick = onBack,
-                modifier = Modifier.weight(1f).height(48.dp),
-                shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = SageOlive, contentColor = BgDark),
-            ) {
-                Icon(Icons.Outlined.DocumentScanner, null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(6.dp))
-                Text("New Scan", fontFamily = DmSans, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
-            }
+            Icon(Icons.Outlined.DocumentScanner, null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(6.dp))
+            Text("New Scan", fontFamily = DmSans, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
         }
 
         Spacer(Modifier.height(16.dp))
