@@ -30,7 +30,7 @@ data class AnalysisResult(
 class DeepfakeAnalyzer(private val context: Context) {
 
     companion object {
-        private const val MODEL_NAME = "Detective-v1"
+        private const val MODEL_NAME = "gemini-2.5-flash"
         private const val FRAMES_PER_VIDEO = 16
 
         // ── IMAGE FORENSIC PROMPT ──────────────────────────────────────
@@ -259,7 +259,7 @@ You MUST respond with ONLY valid JSON (no markdown):
         return AnalysisResult(
             verdict = finalVerdict,
             confidence = finalConf,
-            modelUsed = "Gemini 2.5 Flash (Cloud)",
+            modelUsed = "Detective-v1 (Video)",
             processingTimeMs = System.currentTimeMillis() - t0,
             videoVerdict = visualResult.verdict,
             videoConfidence = visualResult.confidence,
@@ -291,7 +291,7 @@ You MUST respond with ONLY valid JSON (no markdown):
         )
 
         onProgress(0.90f, "Parsing forensic report…")
-        return parseGeminiResponse(response.text, "Gemini 2.5 Flash (Audio)", t0)
+        return parseGeminiResponse(response.text, "Detective-v1 (Audio)", t0)
     }
 
     // ─────────────────────────────────────────────────────────────────

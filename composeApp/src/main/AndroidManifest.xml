@@ -14,7 +14,8 @@
         android:label="REALorNOT"
         android:supportsRtl="true"
         android:theme="@style/Theme.REALorNOT"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true">
 
         <activity
             android:name=".MainActivity"
