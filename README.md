@@ -283,7 +283,6 @@ com.realornot/
 | **Database** | Room (SQLite) with reactive Flows |
 | **Architecture** | MVVM (ViewModel + StateFlow) |
 | **Security** | AndroidX Security Crypto (AES-256) |
-| **Animations** | Spring physics, infinite transitions |
 | **Typography** | Google Fonts (Space Grotesk, DM Sans) |
 | **Min SDK** | Android 8.0 (API 26) |
 | **Target SDK** | Android 15 (API 35) |
